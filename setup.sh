@@ -35,6 +35,7 @@ function setup_users() {
             warning 'Failed to create user'
             exit 1
         fi
+        passwd admin
     fi
 
     msg2 'Setting up sftp user'
@@ -48,6 +49,7 @@ function setup_users() {
             warning 'Failed to create user'
             exit 1
         fi
+        passwd sftp
     fi
 }
 
