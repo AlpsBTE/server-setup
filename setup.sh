@@ -136,8 +136,7 @@ function setup_ufw() {
     ufw limit ssh
     ufw allow from 127.0.0.1
     # Website
-    ufw allow http
-    ufw allow https
+    ufw allow 'Nginx Full'
     # Minecraft
     ufw allow 25565
     # McMyAdmin Panel
