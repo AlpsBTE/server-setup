@@ -158,7 +158,18 @@ function setup_mariadb() {
     mysql_secure_installation
 }
 
+function setup_nginx() {
+    msg 'Setting up nginx'
+
+    if ! apt-get install nginx; then
+        error 'Failed to install packages'
+        exit 1
+    fi
+    mysql_secure_installation
+}
+
 setup_users
 setup_mcmyadmin
 setup_ufw
 setup_mariadb
+setup_nginx
