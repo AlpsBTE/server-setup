@@ -111,7 +111,7 @@ Alias=mcmyadmin.service
 EOF
     systemctl enable mcmyadmin.service
 
-    if [ -z ${IS_NEW_SERVER+x} ]; then
+    if [ ! -z ${IS_NEW_SERVER+x} ]; then
         msg2 'Starting service'
         systemctl start mcmyadmin.service
     fi
